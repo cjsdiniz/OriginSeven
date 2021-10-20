@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  background: lightyellow;
+}
+
+h1 {
+  font-size: 1.5 rem;
+}
+
+a {
+  /* margin-top: 0.25 rem; */
+  color: grey;
+  text-decoration: none;
+}

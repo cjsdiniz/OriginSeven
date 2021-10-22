@@ -3,6 +3,9 @@
     <head>
         <title>Carlos Diniz | DoWhile 2021</title>
         <link rel="stylesheet" href="style.css">
+
+        
+        <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
@@ -16,14 +19,14 @@
                         <img src="images/build.svg" alt="Selo Rocketseat" />
                     </span>
                     <!-- <img src="images/" alt="Foto pessoal" /> -->
-                    <img src="https://lorempixel.com/185/185/people/" alt="Foto pessoal" />
+                    <img id="userImage" alt="Foto pessoal" />
                 </div>
-                <h1 id="userName">Carlos Diniz</h1>
-                <a href="https://github.com/cjsdiniz/" target="_blank">
+                <h1 id="userName">CJSDiniz</h1>
+                <a id="userLink" target="_blank">
                     <img src="images/github.svg" alt="Github icon">
-                    cjsdiniz
+                    <span id="userId">-</span>
                 </a>
-                <p>
+                <p id="userBio">
                     An instructor focused on helping people start programming for web
                 </p>
                 <ul id="socialLinks">
@@ -45,24 +48,7 @@
                 </ul>
             </div>
         </main>
-        <script>
-            const SocialMediaLinks = {
-                github: 'cjsdiniz',
-                youtube: 'cjsdiniz',
-                instagram: 'cjsdiniz',
-                twitter: 'cjsdiniz'
-            }
-            
-            function changeSocialMediaLinks(){
-                // document.getElementById('userName').textContent='Jorge Silva'
-
-               for (let li of socialLinks.children){
-                    const social = li.getAttribute('class')
-                    li.children[0].href=`https://${social}.com/${SocialMediaLinks[social]}/`
-               }
-            }
-
-            changeSocialMediaLinks()
-        </script>
+        <script src="main.js"></script>
+        
     </body>
 </html>

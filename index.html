@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
+
     </head>
     <body>
         <main>
@@ -17,32 +18,51 @@
                     <!-- <img src="images/" alt="Foto pessoal" /> -->
                     <img src="https://lorempixel.com/185/185/people/" alt="Foto pessoal" />
                 </div>
-                <h1>Carlos Diniz</h1>
-                <a href="https://www.instagram.com/cjsdiniz/" target="_blank">
+                <h1 id="userName">Carlos Diniz</h1>
+                <a href="https://github.com/cjsdiniz/" target="_blank">
                     <img src="images/github.svg" alt="Github icon">
                     cjsdiniz
                 </a>
                 <p>
                     An instructor focused on helping people start programming for web
                 </p>
-                <ul>
-                    <li>
-                        <a href="https://www.youtube.com/cjsdiniz" alt="Icon Youtube" target="_blank">
+                <ul id="socialLinks">
+                    <li class="youtube">
+                        <a href="https://youtube.com/cjsdiniz" alt="Icon Youtube" target="_blank">
                             <img src="images/youtube.svg" alt="Youtube icon">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.instagram.com/cjsdiniz/" alt="Icon Youtube" target="_blank">
+                    <li class="instagram">
+                        <a href="https://instagram.com/cjsdiniz/" alt="Icon Instagram" target="_blank">
                             <img src="images/instagram.svg" alt="Instagram icon">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.twitter.com/cjsdiniz/" alt="Icon Youtube" target="_blank">
+                    <li class="twitter">
+                        <a href="https://twitter.com/cjsdiniz/" alt="Icon Twitter" target="_blank">
                             <img src="images/twitter.svg" alt="Twitter icon">
                         </a>
                     </li>
                 </ul>
             </div>
         </main>
+        <script>
+            const SocialMediaLinks = {
+                github: 'cjsdiniz',
+                youtube: 'cjsdiniz',
+                instagram: 'cjsdiniz',
+                twitter: 'cjsdiniz'
+            }
+            
+            function changeSocialMediaLinks(){
+                // document.getElementById('userName').textContent='Jorge Silva'
+
+               for (let li of socialLinks.children){
+                    const social = li.getAttribute('class')
+                    li.children[0].href=`https://${social}.com/${SocialMediaLinks[social]}/`
+               }
+            }
+
+            changeSocialMediaLinks()
+        </script>
     </body>
 </html>

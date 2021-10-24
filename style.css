@@ -86,8 +86,21 @@ ul {
 
 @media (min-width: 720px) {
   /* estilos versão tablet */
+  main {
+    min-height: 1020px;
+  }
 }
 
 @media (min-width: 960px) {
   /* estilos versão desktop */
+  main {
+    /* min-height: 8000px; */
+  }
+}
+
+@media (min-width: 1080px) {
+  /* estilos versão tv */
+  main {
+    min-height: 1920px;
+  }
 }
